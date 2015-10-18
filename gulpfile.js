@@ -5,7 +5,7 @@ var uglify = require('gulp-uglify');
 var watch  = require('gulp-watch');
 
 var jade_path     = 'jade/*.jade'
-   ,stylus_path   = 'assets/stylesheets/stylus/**/*.styl'
+   ,stylus_path   = 'assets/stylesheets/stylus/*.styl'
    ,js_path       = 'assets/javascripts/*.js'
    ,compiled_path = 'compiled_assets/';
 
