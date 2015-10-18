@@ -14,7 +14,8 @@
     "jquery": "~2.1.4",
     "jquery-ujs": "~1.0.4",
     "module": "~1.0.4",
-    "jquery-meiomask": "~1.1.14"
+    "jquery-meiomask": "~1.1.14",
+    "font-awesome": "4.4.0"
   },
   "resolutions": {
     "jquery": "~2.1.4"
