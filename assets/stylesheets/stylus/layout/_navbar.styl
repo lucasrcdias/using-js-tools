@@ -1,0 +1,102 @@
+.nav
+  width: 100%
+  overflow: auto
+
+  @media screen and (max-width: $smartphone-max)
+    background: #fff
+    border-bottom: #c1c1c1
+
+  @media screen and (min-width: $tablet-min)
+    padding: 0.8rem 0
+
+  &.fixed-nav
+    background: #fff
+    border-bottom: #c1c1c1
+    position: fixed
+    top: 0
+    left: 0
+
+  .nav-toggle-input
+    display: none
+
+    @media screen and (max-width: $smartphone-max)
+      &:checked ~ .nav-wrapper-left
+        max-height: 300px
+        position: fixed
+        top: 51px
+        background: #fff
+        width: 100%
+        left: 0
+        padding: 1rem
+        border-top: 1px solid #f1f1f1
+
+  @media screen and (max-width: $smartphone-max)
+    .nav-toggle
+      float: left
+      padding: 1.4rem 1rem
+      margin-bottom: 0
+
+      .fa
+        color: $primary-color
+        font-size: 2rem
+
+  @media screen and (min-width: $tablet-min)
+    .nav-toggle
+      display: none
+
+  .nav-wrapper
+    margin-bottom: 0
+
+    &.nav-wrapper-left
+      @media screen and (max-width: $smartphone-max)
+        max-height: 0
+        overflow: hidden
+
+        .nav-item
+          display: block
+          padding: 1rem
+
+      @media screen and (min-width: $tablet-min)
+        text-align: left
+        float: left
+
+    &.nav-wrapper-right
+      text-align: right
+      float: right
+
+      @media screen and (max-width: $smartphone-max)
+        padding: 1rem 0
+
+    .nav-item
+      display: inline-block
+      padding: 0.5rem 1rem
+
+      &.buy-now
+        background: $buy-primary-color
+        border-bottom: 1px solid $buy-secondary-color
+        padding-left: 1.5rem
+        padding-right: @padding-left
+
+        &:hover
+          background: $buy-secondary-color
+
+      &.sign-up
+        background: $primary-color
+        border-bottom: 1px solid $secondary-color
+
+        &:hover
+          background: $secondary-color
+
+      &.buy-now, &.sign-up
+        border-radius: $default-border-radius
+
+        .nav-text, .nav-text:hover
+          color: #fff
+          text-decoration: none
+
+      .nav-text
+        font-weight: 500
+        color: $primary-color
+
+        &:hover
+          color: $secondary-color
