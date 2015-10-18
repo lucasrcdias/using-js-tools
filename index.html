@@ -2,14 +2,23 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Landing Page</title>
-    <link rel="stylesheet" href="vendor/assets/bower/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/assets/bower/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/assets/bower/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/stylesheets/css/main.css">
   </head>
   <body>
     <header class="header">
       <nav role="navigation" class="nav">
         <div class="container">
+          <label for="nav-toggle" class="nav-toggle"><i class="fa fa-bars"></i></label>
+          <input id="nav-toggle" type="checkbox" name="nav-toggle" class="nav-toggle-input">
           <ul class="nav-wrapper nav-wrapper-left">
             <li class="nav-item"><a href="#" class="nav-text">About</a></li>
             <li class="nav-item"><a href="#" class="nav-text">Pricing</a></li>

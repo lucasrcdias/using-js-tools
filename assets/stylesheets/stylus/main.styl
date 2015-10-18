@@ -8,6 +8,18 @@ $buy-primary-color   = #2ecc71
 $buy-secondary-color = #27ae60
 
 $default-border-radius = 3px
+
+$smartphone = 320px
+$tablet     = 768px
+$desktop    = 1224px
+
+$smartphone-min = $smartphone
+$smartphone-max = $tablet - 1px
+
+$tablet-min = $tablet
+$tablet-max = $desktop - 1px
+
+$desktop-min = $desktop
 /*-----------*/
 
 /* RESET */
@@ -28,8 +40,14 @@ body
 /* NAV */
 .nav
   width: 100%
-  padding: 0.8rem 0
   overflow: auto
+
+  @media screen and (max-width: $smartphone-max)
+    background: #fff
+    border-bottom: #c1c1c1
+
+  @media screen and (min-width: $tablet-min)
+    padding: 0.8rem 0
 
   &.fixed-nav
     background: #fff
@@ -38,16 +56,56 @@ body
     top: 0
     left: 0
 
+  .nav-toggle-input
+    display: none
+
+    @media screen and (max-width: $smartphone-max)
+      &:checked ~ .nav-wrapper-left
+        max-height: 300px
+        position: fixed
+        top: 51px
+        background: #fff
+        width: 100%
+        left: 0
+        padding: 1rem
+        border-top: 1px solid #f1f1f1
+
+  @media screen and (max-width: $smartphone-max)
+    .nav-toggle
+      float: left
+      padding: 1.4rem 1rem
+      margin-bottom: 0
+
+      .fa
+        color: $primary-color
+        font-size: 2rem
+
+  @media screen and (min-width: $tablet-min)
+    .nav-toggle
+      display: none
+
   .nav-wrapper
     margin-bottom: 0
 
     &.nav-wrapper-left
-      text-align: left
-      float: left
+      @media screen and (max-width: $smartphone-max)
+        max-height: 0
+        overflow: hidden
+
+        .nav-item
+          display: block
+          padding: 1rem
+
+      @media screen and (min-width: $tablet-min)
+        text-align: left
+        float: left
 
     &.nav-wrapper-right
       text-align: right
       float: right
+
+      @media screen and (max-width: $smartphone-max)
+        padding: 1rem 0
 
     .nav-item
       display: inline-block

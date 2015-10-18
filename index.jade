@@ -2,15 +2,27 @@ doctype html
 html(lang="pt-br")
   head
     meta(charset="utf-8")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+
     title Landing Page
     
-    link(rel="stylesheet", href="vendor/assets/bower/bootstrap/dist/css/bootstrap.css")
+    link(rel="stylesheet", href="vendor/assets/bower/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="vendor/assets/bower/font-awesome/css/font-awesome.min.css")
     link(rel="stylesheet", href="assets/stylesheets/css/main.css")
   
   body
     header.header
       nav.nav(role="navigation")
         div.container
+          label.nav-toggle(for="nav-toggle")
+            i.fa.fa-bars
+          input#nav-toggle.nav-toggle-input(type="checkbox", name="nav-toggle")
+          
           ul.nav-wrapper.nav-wrapper-left
             li.nav-item
               a.nav-text(href="#") About
@@ -18,6 +30,7 @@ html(lang="pt-br")
               a.nav-text(href="#") Pricing
             li.nav-item.buy-now
               a.nav-text(href="#") Buy Now
+
           ul.nav-wrapper.nav-wrapper-right
             li.nav-item
               a.nav-text(href="#") Sign in
