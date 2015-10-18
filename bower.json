@@ -1,0 +1,22 @@
+{
+  "name": "using-js-tools",
+  "version": "1.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "jquery-ujs": "~1.0.4",
+    "module": "~1.0.4",
+    "jquery-meiomask": "~1.1.14"
+  },
+  "resolutions": {
+    "jquery": "~2.1.4"
+  }
+}
