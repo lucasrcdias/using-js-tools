@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+/* VARIABLES */
+/*-----------*/
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  background: #c1c1c1;
+}
+/*-----------*/
+/* NAV */
+.nav {
+  width: 100%;
+  padding: 0.8rem 0;
+  overflow: auto;
+}
+.nav.fixed-nav {
+  background: #fff;
+  border-bottom: #c1c1c1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.nav .nav-wrapper {
+  margin-bottom: 0;
+}
+.nav .nav-wrapper.nav-wrapper-left {
+  text-align: left;
+  float: left;
+}
+.nav .nav-wrapper.nav-wrapper-right {
+  text-align: right;
+  float: right;
+}
+.nav .nav-wrapper .nav-item {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+.nav .nav-wrapper .nav-item.buy-now {
+  background: #2ecc71;
+  border-bottom: 1px solid #27ae60;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.nav .nav-wrapper .nav-item.buy-now:hover {
+  background: #27ae60;
+}
+.nav .nav-wrapper .nav-item.sign-up {
+  background: #3498db;
+  border-bottom: 1px solid #2980b9;
+}
+.nav .nav-wrapper .nav-item.sign-up:hover {
+  background: #2980b9;
+}
+.nav .nav-wrapper .nav-item.buy-now,
+.nav .nav-wrapper .nav-item.sign-up {
+  border-radius: 3px;
+}
+.nav .nav-wrapper .nav-item.buy-now .nav-text,
+.nav .nav-wrapper .nav-item.sign-up .nav-text,
+.nav .nav-wrapper .nav-item.buy-now .nav-text:hover,
+.nav .nav-wrapper .nav-item.sign-up .nav-text:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.nav .nav-wrapper .nav-item .nav-text {
+  font-weight: 500;
+  color: #3498db;
+}
+.nav .nav-wrapper .nav-item .nav-text:hover {
+  color: #2980b9;
+}
