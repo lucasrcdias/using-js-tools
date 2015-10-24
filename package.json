@@ -25,9 +25,9 @@
   "homepage": "https://github.com/lucasrcdias/using-js-tools#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
     "gulp-jade": "^1.1.0",
     "gulp-stylus": "^2.1.0",
-    "gulp-uglify": "^1.4.2",
-    "gulp-watch": "^4.3.5"
   }
 }
