@@ -4,17 +4,30 @@
 
   @media screen and (max-width: $smartphone-max)
     background: #fff
-    border-bottom: #c1c1c1
+    border-bottom: 1px solid #e6e6e6
+
+    .nav-toggle
+      float: left
+      padding: 1.4rem 1rem
+      margin-bottom: 0
+
+      .fa
+        color: $primary-color
+        font-size: 2rem
 
   @media screen and (min-width: $tablet-min)
     padding: 0.8rem 0
     position: absolute
-    top: 0
+    top: 1rem
     left: 0
+    z-index: 2
+
+    .nav-toggle
+      display: none
 
   &.fixed-nav
-    background: #fff
-    border-bottom: #c1c1c1
+    background: $secondary-color
+    border-bottom: 1px solid shade($secondary-color, 10%)
     position: fixed
     top: 0
     left: 0
@@ -27,25 +40,16 @@
         max-height: 300px
         position: fixed
         top: 51px
-        background: #fff
+        background: #f1f1f1
         width: 100%
         left: 0
         padding: 1rem
-        border-top: 1px solid #f1f1f1
+        border-top: 1px solid #e6e6e6
+        border-bottom: 1px solid #e6e6e6
+        z-index: 3
 
-  @media screen and (max-width: $smartphone-max)
-    .nav-toggle
-      float: left
-      padding: 1.4rem 1rem
-      margin-bottom: 0
-
-      .fa
-        color: $primary-color
-        font-size: 2rem
-
-  @media screen and (min-width: $tablet-min)
-    .nav-toggle
-      display: none
+        .buy-now .nav-text
+          color: #fff
 
   .nav-wrapper
     margin-bottom: 0
@@ -80,26 +84,36 @@
         padding-left: 1.5rem
         padding-right: @padding-left
 
-        &:hover
-          background: $buy-secondary-color
-
       &.sign-up
-        background: $primary-color
-        border-bottom: 1px solid $secondary-color
+        border-bottom: 1px solid
 
-        &:hover
-          background: $secondary-color
+        @media screen and (max-width: $smartphone-max)
+          background: $primary-color
+          border-color: $secondary-color
+
+          .nav-text
+            color: #fff
+
+        @media screen and (min-width: $tablet-min)
+          background: #fff
+          border-color: $secondary-color
+
+          .nav-text
+            color: $primary-color
 
       &.buy-now, &.sign-up
         border-radius: $default-border-radius
 
-        .nav-text, .nav-text:hover
-          color: #fff
-          text-decoration: none
-
       .nav-text
-        font-weight: 500
-        color: $primary-color
+        font-weight: 600
 
-        &:hover
-          color: $secondary-color
+        @media screen and (max-width: $smartphone-max)
+          color: $primary-color
+
+        @media screen and (min-width: $tablet-min)
+          color: #fff
+          transition: .3s all ease
+
+          &:hover
+            text-shadow: 0px 0px 10px rgba(255,255,255,0.6)
+            text-decoration: none
