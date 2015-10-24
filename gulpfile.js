@@ -1,32 +1,47 @@
 var gulp   = require('gulp');
 var jade   = require('gulp-jade');
 var stylus = require('gulp-stylus');
-var uglify = require('gulp-uglify');
-var watch  = require('gulp-watch');
+var concat = require('gulp-concat');
+var autoprefixer = require('gulp-autoprefixer')
 
-var jade_path     = 'jade/*.jade'
-   ,stylus_path   = 'assets/stylesheets/stylus/*.styl'
-   ,js_path       = 'assets/javascripts/*.js'
-   ,compiled_path = 'compiled_assets/';
+var livereload = require('gulp-livereload');
 
-gulp.task('default', ['jade', 'stylus', 'javascripts']);
+var paths = {
+  jade: 'jade/*.jade',
+  stylus: 'assets/stylesheets/stylus/**/*.styl',
+  compiled: 'compiled_assets/'
+};
+
+var autoprefixerOptions = {
+  browsers: [
+      '> 1%',
+      'last 2 versions',
+      'firefox >= 4',
+      'safari 7',
+      'safari 8',
+      'IE 8',
+      'IE 9',
+      'IE 10',
+      'IE 11'
+  ],
+  cascade: false
+}
+
+gulp.task('watch', function() {
+  gulp.watch(paths.jade, ['jade']);
+  gulp.watch(paths.stylus, ['stylus']);
+});
 
 gulp.task('jade', function() {
-  return gulp.src(jade_path)
-    .pipe(watch(jade_path))
+  return gulp.src(paths.jade)
     .pipe(jade())
-    .pipe(gulp.dest(compiled_path));
+    .pipe(gulp.dest(paths.compiled));
 });
 
 gulp.task('stylus', function() {
-  gulp.src(stylus_path)
-    .pipe(watch(stylus_path))
+  return gulp.src('assets/stylesheets/stylus/main.styl')
+    .pipe(autoprefixer(autoprefixerOptions))
     .pipe(stylus({ compress: true }))
-    .pipe(gulp.dest(compiled_path));
-});
-
-gulp.task('javascripts', function() {
-  gulp.src(js_path)
-    .pipe(uglify())
-    .pipe(gulp.dest(compiled_path));
+    .pipe(concat('main.css'))
+    .pipe(gulp.dest(paths.compiled));
 });
