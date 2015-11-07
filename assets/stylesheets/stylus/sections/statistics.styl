@@ -1,0 +1,33 @@
+.statistics
+  background: #fff
+  border-bottom: 1px solid #e7e7e7
+
+  .statistic
+    padding: 2rem 1rem
+    text-align: center
+    transition: .3s all ease
+
+
+    @media screen and (max-width: $smartphone-max)
+      display: block
+      width: 100%
+
+    @media screen and (min-width: $tablet-min)
+      display: inline-block
+      width: (100 / 4) * 1%
+      border-right: 1px solid #e7e7e7
+
+      &:hover
+        background: #f1f1f1
+
+      &:first-child
+        border-left: 1px solid #e7e7e7
+
+    .statistic-icon
+      display: block
+      font-size: 4rem
+      margin-bottom: 1rem
+      color: $primary-color
+
+    .statistic-text
+      font-weight: 500
