@@ -4,8 +4,6 @@ var stylus = require('gulp-stylus');
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer')
 
-var livereload = require('gulp-livereload');
-
 var paths = {
   jade: 'jade/*.jade',
   stylus: 'assets/stylesheets/stylus/**/*.styl',
