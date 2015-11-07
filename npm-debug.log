@@ -1,0 +1,56 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g' ]
+2 info using npm@3.3.12
+3 info using node@v4.2.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData .
+8 silly fetchDirectoryPackageData .
+9 silly fetchPackageMetaData Error: Failed to parse json
+9 silly fetchPackageMetaData Trailing comma in object at 32:3
+9 silly fetchPackageMetaData   }
+9 silly fetchPackageMetaData   ^
+9 silly fetchPackageMetaData     at parseError (/usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:379:11)
+9 silly fetchPackageMetaData     at parseJson (/usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:68:23)
+9 silly fetchPackageMetaData     at /usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
+9 silly fetchPackageMetaData     at /usr/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:76:16
+9 silly fetchPackageMetaData     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:380:3)
+9 silly fetchPackageMetaData  error for . { [Error: Failed to parse json
+9 silly fetchPackageMetaData Trailing comma in object at 32:3
+9 silly fetchPackageMetaData   }
+9 silly fetchPackageMetaData   ^]
+9 silly fetchPackageMetaData   code: 'EJSONPARSE',
+9 silly fetchPackageMetaData   file: '/home/lucas/Documents/Github/using-js-tools/package.json' }
+10 silly rollbackFailedOptional Starting
+11 silly rollbackFailedOptional Finishing
+12 silly runTopLevelLifecycles Starting
+13 silly runTopLevelLifecycles Finishing
+14 silly install printInstalled
+15 verbose stack Error: Failed to parse json
+15 verbose stack Trailing comma in object at 32:3
+15 verbose stack   }
+15 verbose stack   ^
+15 verbose stack     at parseError (/usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:379:11)
+15 verbose stack     at parseJson (/usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:68:23)
+15 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
+15 verbose stack     at /usr/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:76:16
+15 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:380:3)
+16 verbose cwd /home/lucas/Documents/Github/using-js-tools
+17 error Linux 3.19.0-32-generic
+18 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g"
+19 error node v4.2.2
+20 error npm  v3.3.12
+21 error file /home/lucas/Documents/Github/using-js-tools/package.json
+22 error code EJSONPARSE
+23 error Failed to parse json
+23 error Trailing comma in object at 32:3
+23 error   }
+23 error   ^
+24 error File: /home/lucas/Documents/Github/using-js-tools/package.json
+25 error Failed to parse package.json data.
+25 error package.json must be actual JSON, not just JavaScript.
+25 error
+25 error This is not a bug in npm.
+25 error Tell the package author to fix their package.json file. JSON.parse
+26 verbose exit [ 1, true ]
