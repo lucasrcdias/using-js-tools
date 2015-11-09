@@ -1,8 +1,10 @@
-var gulp   = require('gulp');
-var jade   = require('gulp-jade');
-var stylus = require('gulp-stylus');
-var concat = require('gulp-concat');
-var autoprefixer = require('gulp-autoprefixer')
+var gulp         = require('gulp');
+var jade         = require('gulp-jade');
+var stylus       = require('gulp-stylus');
+var concat       = require('gulp-concat');
+var connect      = require('gulp-connect');
+var autoprefixer = require('gulp-autoprefixer');
+
 
 var paths = {
   jade: 'jade/*.jade',
@@ -24,6 +26,15 @@ var autoprefixerOptions = {
   ],
   cascade: false
 }
+
+gulp.task('default', ['connect', 'watch']);
+
+gulp.task('connect', function() {
+  connect.server({
+    root: paths.compiled_assets,
+    livereload: true
+  });
+});
 
 gulp.task('watch', function() {
   gulp.watch(paths.jade, ['jade']);
