@@ -1,0 +1,45 @@
+.feature
+  position: relative
+
+  @media screen and (max-width: $smartphone-max)
+    padding: 25px 0
+
+  @media screen and (min-width: $tablet-min)
+    padding: 50px 0
+
+  &:nth-child(even)
+    background: #f1f1f1
+    border-top: 2px solid #e7e7e7
+    border-bottom: 1px solid #e7e7e7
+
+  &:nth-child(odd)
+    background: #fff
+
+
+  .feature-description
+    h2, p
+      color: #333
+      margin-bottom: 30px
+
+    h2
+      font-weight: 100
+
+    p
+      font-size: 1.5rem
+      line-height: 1.8rem
+
+    .primary-button
+      color: #fff
+
+      @media screen and (max-width: $smartphone-max)
+        width: 100%
+
+  .feature-image
+    @media screen and (max-width: $smartphone-max)
+      display: none
+
+    @media screen and (min-width: $tablet-min)
+      text-align: center
+
+      img
+        max-width: 80%
